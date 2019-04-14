@@ -1,0 +1,11 @@
+
+<h1>Showing selected notebook</h1>
+<p>
+	Title: <%= @notebook.title %>
+</p>
+<p>
+	Description: <%= @notebook.description %>
+</p>
+
+<td><%= link_to 'Edit', edit_notebook_path(@notebook) %></td>
+<td><%= link_to  'Back', @articleInterface %></td>
