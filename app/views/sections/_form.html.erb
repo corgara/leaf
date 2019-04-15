@@ -1,0 +1,24 @@
+<% if @section.errors.any? %>
+	 <h2>The following errors prevented the section from saving:</h2>
+	 <ul>
+	 	<% @section.errors.full_messages.each do |msg|%>
+	 		<li><%= msg %></li>
+	 	<% end %>
+	 </ul>
+<% end %>
+
+<%= form_for @section do |f| %>
+ <p>
+	  <%= f.label :title %><br>
+	  <%= f.text_field :title %>
+ </p>
+ <p>
+	  <%= f.label :description %><br>
+	  <%= f.text_area :description %>
+ </p>
+ <p>
+  	<%= f.submit %>
+ </p>
+<% end %>
+
+<%= link_to 'Back', sections_path %>

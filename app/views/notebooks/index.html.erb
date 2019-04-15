@@ -1,0 +1,17 @@
+<h1>Listing all Notebooks</h1> 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<tr><% @notebooks.each do |notebook| %></tr>
+		<tr>
+			<td><%= notebook.title %></td>
+			<td><%= notebook.description %></td>
+			<td><%= link_to 'Edit ', edit_notebook_path(notebook) %></td>
+			<td><%= link_to 'Show ', notebook_path(notebook) %></td> w
+			<td><%= link_to 'Delete ', notebook_path(notebook),
+ 				method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
+		</tr>
+	<%end%>
+</table>

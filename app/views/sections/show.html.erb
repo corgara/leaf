@@ -1,0 +1,22 @@
+
+<h1>Showing selected section</h1>
+<p>
+	Title: <%= @section.title %>
+</p>
+<p>
+	Description: <%= @section.description %>
+</p>
+
+<% @section.tabs.each do |tab| %>
+
+ 	<p>
+		Title: <%= tab.title %>
+	</p>
+	<p>
+		Description: <%= tab.description %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Edit', edit_section_path(@section) %>
+<%= link_to 'Back', section_path %>

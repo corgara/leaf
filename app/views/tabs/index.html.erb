@@ -1,0 +1,17 @@
+<h1>Listing all Tabs</h1> 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<tr><% @tabs.each do |tab| %></tr>
+		<tr>
+			<td><%= tab.title %></td>
+			<td><%= tab.description %></td>
+			<td><%= link_to 'Edit ', edit_tab_path(tab) %></td>
+			<td><%= link_to 'Show ', tab_path(tab) %></td> w
+			<td><%= link_to 'Delete ', tab_path(tab),
+ 				method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
+		</tr>
+	<%end%>
+</table>

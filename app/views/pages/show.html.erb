@@ -1,0 +1,22 @@
+
+<h1>Showing selected page</h1>
+<p>
+	Title: <%= @page.title %>
+</p>
+<p>
+	Description: <%= @page.description %>
+</p>
+
+<% @page.paragraph.each do |paragraph| %>
+
+ 	<p>
+		Title: <%= paragraph.title %>
+	</p>
+	<p>
+		Description: <%= paragraph.description %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Edit', edit_page_path(@page) %>
+<%= link_to 'Back', pages_path %>

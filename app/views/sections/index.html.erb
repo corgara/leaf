@@ -1,0 +1,17 @@
+<h1>Listing all Sections</h1> 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<tr><% @sections.each do |section| %></tr>
+		<tr>
+			<td><%= section.title %></td>
+			<td><%= section.description %></td>
+			<td><%= link_to 'Edit ', edit_section_path(section) %></td>
+			<td><%= link_to 'Show ', section_path(section) %></td> w
+			<td><%= link_to 'Delete ', section_path(section),
+ 				method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
+		</tr>
+	<%end%>
+</table>

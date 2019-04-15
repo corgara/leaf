@@ -1,0 +1,11 @@
+
+<h1>Showing selected paragraph</h1>
+<p>
+	Title: <%= @paragraph.title %>
+</p>
+<p>
+	Description: <%= @paragraph.description %>
+</p>
+
+<%= link_to 'Edit', edit_paragraph_path(@paragraph) %>
+<%= link_to 'Back', paragraphs_path %>
