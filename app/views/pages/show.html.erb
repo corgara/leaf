@@ -7,13 +7,16 @@
 	Description: <%= @page.description %>
 </p>
 
-<% @page.paragraph.each do |paragraph| %>
+<% @page.paragraphs.each do |paragraph| %>
 
  	<p>
 		Title: <%= paragraph.title %>
 	</p>
 	<p>
 		Description: <%= paragraph.description %>
+	</p>
+	<p>
+		<%= link_to 'Paragraph', paragraph_path(paragraph.id) %>
 	</p>
 	
 <% end %>

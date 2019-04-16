@@ -15,7 +15,6 @@ class ParagraphsController < ApplicationController
 	end
 	
 	def show
-		@paragraph = Paragraph.includes(:sections).find(params[:id])
 	end
 	
 	def edit

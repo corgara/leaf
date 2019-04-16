@@ -17,6 +17,7 @@ class SectionsController < ApplicationController
 	end
 	
 	def show
+		@section = Section.includes(:tabs).find(params[:id])
 	end
 	
 	def edit

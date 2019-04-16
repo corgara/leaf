@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_action :set_page, only: [:edit, :update, :show, :show_section, :destroy]
+	before_action :set_page, only: [:edit, :update, :show, :destroy]
 	def new
 		@page = Page.new
 	end
@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 	end
 	
 	def show
-		@page = Page.includes(:sections).find(params[:id])
+		@page = Page.includes(:paragraphs).find(params[:id])
 	end
 	
 	def edit

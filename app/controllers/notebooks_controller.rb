@@ -2,7 +2,7 @@ class NotebooksController < ApplicationController
 	before_action :set_notebook, only: [:edit, :update, :show, :destroy]
 	def new
 		@notebook = Notebook.new
-		@section = Section.find_by id: params["section_id"]
+		#@section = Section.find_by id: params["section_id"]
 	end
 	
 	def create 

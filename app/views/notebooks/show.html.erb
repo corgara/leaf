@@ -15,9 +15,13 @@
 	<p>
 		Description: <%= section.description %>
 	</p>
-<!-- 	<p>
-		<%= link_to 'Section', section_path(@section.section_id) %>
-	</p> -->
+	<p>
+		ID: <%= section.id %>
+	</p>
+
+	<p>
+		<%= link_to 'Section', section_path(section.id) %>
+	</p>
 
 	
 <% end %>

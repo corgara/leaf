@@ -1,5 +1,5 @@
 class TabsController < ApplicationController
-	before_action :set_tab, only: [:edit, :update, :show, :show_section, :destroy]
+	before_action :set_tab, only: [:edit, :update, :show, :destroy]
 	def new
 		@tab = Tab.new
 	end
@@ -15,7 +15,7 @@ class TabsController < ApplicationController
 	end
 	
 	def show
-		@tab = Tab.includes(:sections).find(params[:id])
+		@tab = Tab.includes(:pages).find(params[:id])
 	end
 	
 	def edit
