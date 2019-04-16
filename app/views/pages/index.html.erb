@@ -1,0 +1,17 @@
+<h1>Listing all Pages</h1> 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<tr><% @pages.each do |page| %></tr>
+		<tr>
+			<td><%= page.title %></td>
+			<td><%= page.description %></td>
+			<td><%= link_to 'Edit ', edit_page_path(page) %></td>
+			<td><%= link_to 'Show ', page_path(page) %></td> w
+			<td><%= link_to 'Delete ', page_path(page),
+ 				method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
+		</tr>
+	<%end%>
+</table>

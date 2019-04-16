@@ -1,0 +1,25 @@
+
+<h1>Showing selected tab</h1>
+<p>
+	Title: <%= @tab.title %>
+</p>
+<p>
+	Description: <%= @tab.description %>
+</p>
+
+<% @tab.pages.each do |page| %>
+
+ 	<p>
+		Title: <%= page.title %>
+	</p>
+	<p>
+		Description: <%= page.description %>
+	</p>
+	<p>
+		<%= link_to 'Page', page_path(page.id) %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Edit', edit_tab_path(@tab) %>
+<%= link_to 'Back', tabs_path %>

@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   get '/about',   to:'static_pages#about'
   get 'contact',  to:'static_pages#contact'
   resources :articles
+  resources :notebooks #do
+  #   get :section_id, to: "notebooks#new" 
+  # end
+  resources :sections
+  resources :tabs
+  resources :pages
+  resources :paragraphs
   # get  'users#new'
 end

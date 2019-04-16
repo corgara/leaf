@@ -1,0 +1,17 @@
+<h1>Listing all Paragraphs</h1> 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<tr><% @paragraphs.each do |paragraph| %></tr>
+		<tr>
+			<td><%= paragraph.title %></td>
+			<td><%= paragraph.description %></td>
+			<td><%= link_to 'Edit ', edit_paragraph_path(paragraph) %></td>
+			<td><%= link_to 'Show ', paragraph_path(paragraph) %></td> w
+			<td><%= link_to 'Delete ', paragraph_path(paragraph),
+ 				method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
+		</tr>
+	<%end%>
+</table>
